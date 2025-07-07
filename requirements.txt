@@ -1,1 +1,2 @@
-pip install aiogram requests
+aiogram 
+requests

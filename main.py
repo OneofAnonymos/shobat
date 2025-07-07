@@ -7,7 +7,7 @@ OPENAI_API_KEY = 'sk-proj-wZeIZIXjvXoTGzNFaNTXOH3eZ9NzTCBEZilVeAUjGt1v5Hkg7gLXin
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 
-AI_API_URL = 'https://api.openai.com/v1/chat/completions'
+AI_API_URL = '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'
 
 @dp.message_handler()
 async def reply(message: types.Message):

@@ -2,6 +2,20 @@ from aiogram import Bot, Dispatcher, types, executor
 import requests
 import sqlite3
 from datetime import datetime, timedelta
+import os
+
+# اگر دیتابیس وجود نداشت، بساز
+if not os.path.exists("data.db"):
+    conn = sqlite3.connect("data.db")
+    c = conn.cursor()
+    c.execute('''CREATE TABLE IF NOT EXISTS feelings (
+        user_id INTEGER,
+        message TEXT,
+        date TEXT
+    )''')
+    conn.commit()
+    conn.close()
+    print("✅ Database created successfully")
 
 API_TOKEN = '7256696317:AAELyq9iOXaDpLJ5NYf0_yl1WUx353sJmaE'
 OPENAI_API_KEY = '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'

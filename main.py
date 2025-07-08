@@ -50,7 +50,7 @@ def main():
     dp.startup.register(on_startup)
     SimpleRequestHandler(dispatcher=dp, bot=bot).register(app, path="/webhook")
     setup_application(app, dp)
-    web.run_app(app, host="0.0.0.0", port=int(os.getenv("PORT", 8000)))
+    web.run_app(app, host="0.0.0.0", port=int(os.getenv("PORT", 5895)))
 
 if __name__ == '__main__':
     main()
